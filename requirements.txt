@@ -1,0 +1,18 @@
+# Dependências para OCR Text Extractor
+# Instale com: pip install -r requirements.txt
+
+# OCR principal
+pytesseract>=0.3.10
+
+# Processamento de imagens (headless version for server environments)
+opencv-python-headless>=4.8.0
+Pillow>=10.0.0
+
+# Processamento de arrays
+numpy>=1.24.0
+
+# Para argumentos de linha de comando (já incluído no Python padrão)
+# argparse
+
+# Para manipulação de caminhos (já incluído no Python padrão)
+# pathlib
