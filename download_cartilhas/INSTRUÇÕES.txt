@@ -1,0 +1,35 @@
+# 📚 Instruções de Download - Cartilhas sobre Bullying Escolar
+
+## 📄 Arquivos Incluídos
+
+1. **Cartilha_Bullying_Escolar.pdf** - Versão básica (5.9 KB)
+2. **Cartilha_Bullying_Melhorada.pdf** - Versão melhorada (7.3 KB)
+3. **README.md** - Documentação completa
+4. **requirements.txt** - Dependências Python (se quiser executar os scripts)
+
+## 🖨️ Como Usar
+
+1. **Para impressão:** Abra qualquer um dos PDFs e imprima
+2. **Recomendação:** Use a versão "Melhorada" para distribuição
+3. **Formato:** A4, orientação retrato
+4. **Qualidade:** Alta resolução para impressão
+
+## 📱 Para Dispositivos Móveis
+
+- Os PDFs podem ser visualizados em tablets e smartphones
+- Recomendado para leitura: Adobe Reader, Google PDF Viewer
+- Para impressão: Use aplicativos de impressão móvel
+
+## 🎯 Público-Alvo
+
+- Crianças em idade escolar
+- Pais e educadores
+- Escolas e instituições educacionais
+- Projetos de conscientização sobre bullying
+
+## 📞 Suporte
+
+Para dúvidas sobre o conteúdo ou uso das cartilhas, consulte o README.md
+
+---
+**Feito com ❤️ para ajudar crianças a entenderem e combaterem o bullying escolar**
