@@ -1,0 +1,46 @@
+# Arquivos que serão ignorados no deploy
+node_modules/
+.env
+.env.local
+.env.production
+.env.staging
+
+# Arquivos de desenvolvimento
+*.log
+.DS_Store
+Thumbs.db
+
+# Arquivos de build temporários
+dist/
+build/
+.tmp/
+.cache/
+
+# Arquivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Arquivos de teste
+test/
+tests/
+__tests__/
+*.test.js
+*.spec.js
+
+# Documentação local
+README.md
+docs/
+*.md
+
+# Arquivos grandes ou desnecessários
+*.zip
+*.tar.gz
+*.rar
+*.mp4
+*.mov
+*.avi
+
+# Arquivos de configuração local
+wrangler.toml.local

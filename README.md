@@ -1,166 +1,103 @@
-# 📚 Cartilha sobre Bullying Escolar
+# OCR Text Extractor
 
-Uma cartilha educativa sobre bullying escolar criada baseada em texto manuscrito de uma criança, transformada em material educativo estruturado.
+Script Python para extrair texto de imagens usando OCR (Optical Character Recognition) com suporte a múltiplos idiomas e pré-processamento de imagens.
 
-## 📖 Sobre o Projeto
+## Instalação
 
-Este projeto foi desenvolvido a partir da análise de texto manuscrito de uma criança sobre bullying escolar. Utilizando técnicas de OCR (Optical Character Recognition), o texto foi extraído e transformado em uma cartilha educativa completa.
-
-## 🎯 Objetivo
-
-Criar material educativo sobre bullying escolar que:
-- Mantenha a linguagem e raciocínio infantil
-- Seja visualmente atrativo para crianças
-- Forneça orientações práticas sobre como lidar com bullying
-- Esteja pronto para impressão e distribuição
-
-## 📄 Cartilhas Disponíveis
-
-### 1. Cartilha Básica
-- **Arquivo:** `Cartilha_Bullying_Escolar.pdf`
-- **Tamanho:** 5.9 KB
-- **Características:** Versão simples e direta, formato básico para impressão
-
-### 2. Cartilha Melhorada
-- **Arquivo:** `Cartilha_Bullying_Melhorada.pdf`
-- **Tamanho:** 7.3 KB
-- **Características:** Versão elaborada com elementos visuais, tabelas com emojis e cores
-
-## 📋 Conteúdo da Cartilha
-
-### 🎨 Capa
-- Título colorido "CARTILHA BULLYING NA ESCOLA"
-- Elementos visuais infantis (coração, círculos coloridos)
-- Mensagem "Feito com ❤️ por uma criança"
-
-### 📖 Páginas Internas
-
-**Página 1: O que é Bullying?**
-- Definição simples e clara
-- Exemplos concretos com emojis:
-  - 🚫 Chamar nomes feios
-  - 👊 Empurrar ou bater
-  - 🚪 Não deixar brincar
-  - 💬 Espalhar mentiras
-  - 💔 Quebrar coisas
-
-**Página 2: Como identificar o Bullying?**
-- Sinais de que a criança está sendo vítima
-- O que fazer quando vê bullying acontecer
-
-**Página 3: O que fazer quando acontece Bullying?**
-- Para vítimas: Como pedir ajuda
-- Para agressores: Como parar e se desculpar
-- Para testemunhas: Como ajudar
-
-**Página 4: Vamos fazer da escola um lugar melhor!**
-- Ações positivas com emojis
-- Contatos para ajuda (pais, professores, Disque 100)
-
-## 🛠️ Tecnologias Utilizadas
-
-- **Python 3.12**
-- **OCR:** Tesseract + pytesseract
-- **Processamento de Imagem:** OpenCV (headless)
-- **Geração de PDF:** ReportLab
-- **Manipulação de Imagem:** Pillow
-- **Processamento Numérico:** NumPy
-
-## 📁 Estrutura do Projeto
-
-```
-/workspaces/bulling/
-├── img/                                    # Imagens originais
-│   ├── 1.jpeg
-│   ├── 2.jpeg
-│   ├── 3.jpeg
-│   └── 4.jpeg
-├── Cartilha_Bullying_Escolar.pdf          # Cartilha básica
-├── Cartilha_Bullying_Melhorada.pdf        # Cartilha melhorada
-├── ocr_extractor.py                       # Script OCR avançado
-├── ocr_simple.py                          # Script OCR simples
-├── process_images.py                      # Processamento em lote
-├── requirements.txt                       # Dependências Python
-├── output.txt                             # Texto extraído das imagens
-├── texto_extraido_todas_imagens.txt       # Resultado do processamento
-└── README.md                              # Este arquivo
-```
-
-## 🚀 Como Usar
-
-### Instalação das Dependências
-
+### 1. Instalar dependências Python
 ```bash
-# Instalar dependências Python
 pip install -r requirements.txt
+```
 
-# Instalar Tesseract OCR (Ubuntu/Debian)
+### 2. Instalar Tesseract OCR
+
+#### Ubuntu/Debian:
+```bash
 sudo apt update
 sudo apt install tesseract-ocr tesseract-ocr-por
 ```
 
-### Execução dos Scripts
+#### Windows:
+- Baixe o instalador do Tesseract em: https://github.com/UB-Mannheim/tesseract/wiki
+- Instale e adicione ao PATH do sistema
 
+#### macOS:
 ```bash
-# Processar uma imagem específica
-python ocr_simple.py img/1.jpeg
-
-# Processar múltiplas imagens
-python ocr_extractor.py img/*.jpeg -o output.txt
-
-# Processar todas as imagens da pasta
-python process_images.py
+brew install tesseract tesseract-lang
 ```
 
-## 📥 Download
+## Uso
 
-### Download Direto dos PDFs
-
-- [Cartilha Básica - Cartilha_Bullying_Escolar.pdf](Cartilha_Bullying_Escolar.pdf)
-- [Cartilha Melhorada - Cartilha_Bullying_Melhorada.pdf](Cartilha_Bullying_Melhorada.pdf)
-
-### Clone do Repositório
-
+### Uso básico:
 ```bash
-git clone https://github.com/seu-usuario/cartilha-bullying-escolar.git
-cd cartilha-bullying-escolar
+python ocr_extractor.py imagem1.jpg imagem2.png imagem3.jpg
 ```
 
-## 🖨️ Impressão
+### Salvar resultado em arquivo:
+```bash
+python ocr_extractor.py imagem1.jpg -o texto_extraido.txt
+```
 
-As cartilhas estão em formato A4 e prontas para impressão:
-- **Formato:** PDF
-- **Tamanho:** A4 (210 x 297 mm)
-- **Orientação:** Retrato
-- **Qualidade:** Alta resolução para impressão
+### Usar idioma específico:
+```bash
+python ocr_extractor.py imagem1.jpg -l eng  # Inglês
+python ocr_extractor.py imagem1.jpg -l spa  # Espanhol
+python ocr_extractor.py imagem1.jpg -l fra  # Francês
+```
 
-## 📝 Licença
+### Desabilitar pré-processamento:
+```bash
+python ocr_extractor.py imagem1.jpg --no-preprocess
+```
 
-Este projeto é de uso educacional e pode ser distribuído livremente para fins educativos.
+### Modo verbose (mostra detalhes):
+```bash
+python ocr_extractor.py imagem1.jpg -v
+```
 
-## 🤝 Contribuições
+## Exemplos
 
-Contribuições são bem-vindas! Se você quiser:
-- Melhorar o conteúdo da cartilha
-- Adicionar novos recursos
-- Corrigir problemas
-- Sugerir melhorias
+### Processar múltiplas imagens:
+```bash
+python ocr_extractor.py *.jpg *.png -o todas_as_imagens.txt
+```
 
-Sinta-se à vontade para fazer um fork e enviar um pull request.
+### Processar com verbose:
+```bash
+python ocr_extractor.py documento.pdf -v -o texto_do_documento.txt
+```
 
-## 📞 Contato
+## Funcionalidades
 
-Para dúvidas ou sugestões sobre este projeto educacional, entre em contato através das issues do GitHub.
+- ✅ Suporte a múltiplos formatos de imagem (JPG, PNG, TIFF, BMP, etc.)
+- ✅ Pré-processamento automático para melhor precisão
+- ✅ Suporte a múltiplos idiomas
+- ✅ Processamento em lote de múltiplas imagens
+- ✅ Modo verbose para debug
+- ✅ Salvamento automático em arquivo
+- ✅ Tratamento de erros robusto
 
----
+## Idiomas Suportados
 
-**Feito com ❤️ para ajudar crianças a entenderem e combaterem o bullying escolar**
+- `por` - Português (padrão)
+- `eng` - Inglês
+- `spa` - Espanhol
+- `fra` - Francês
+- `deu` - Alemão
+- `ita` - Italiano
+- E muitos outros...
 
-## 📊 Estatísticas do Projeto
+## Troubleshooting
 
-- **Imagens processadas:** 4
-- **Texto extraído:** ~2.000 caracteres
-- **Cartilhas geradas:** 2 versões
-- **Páginas por cartilha:** 4 + capa
-- **Idioma:** Português (Brasil)
-- **Público-alvo:** Crianças em idade escolar
+### Erro "tesseract not found":
+- Certifique-se de que o Tesseract está instalado e no PATH
+- No Windows, pode ser necessário reiniciar o terminal após instalar
+
+### Baixa precisão do OCR:
+- Tente usar `--no-preprocess` para desabilitar pré-processamento
+- Verifique se a imagem tem boa qualidade e resolução
+- Certifique-se de usar o idioma correto com `-l`
+
+### Imagem não carrega:
+- Verifique se o arquivo existe e não está corrompido
+- Certifique-se de que o formato é suportado

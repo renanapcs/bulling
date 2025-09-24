@@ -2,14 +2,14 @@
 # Instale com: pip install -r requirements.txt
 
 # OCR principal
-pytesseract>=0.3.10
+pytesseract==0.3.10
 
-# Processamento de imagens (headless version for server environments)
-opencv-python-headless>=4.8.0
-Pillow>=10.0.0
+# Processamento de imagens
+opencv-python==4.8.1.78
+Pillow==10.0.1
 
 # Processamento de arrays
-numpy>=1.24.0
+numpy==1.24.3
 
 # Para argumentos de linha de comando (já incluído no Python padrão)
 # argparse

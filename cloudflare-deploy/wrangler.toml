@@ -1,0 +1,37 @@
+name = "meu-projeto"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# Configurações de arquivos para deploy
+[build]
+command = "npm run build"
+
+# Incluir apenas arquivos específicos
+[build.upload]
+format = "modules"
+main = "src/index.js"
+
+# Excluir arquivos específicos (além do .gitignore)
+[build.upload.rules]
+exclude = [
+  "*.md",
+  "*.log", 
+  "test/**/*",
+  "docs/**/*",
+  "*.test.js",
+  "*.spec.js"
+]
+
+# Incluir apenas arquivos específicos
+include = [
+  "src/**/*",
+  "public/**/*",
+  "dist/**/*"
+]
+
+# Configurações por ambiente
+[env.production]
+name = "meu-projeto-prod"
+
+[env.staging]
+name = "meu-projeto-staging"
